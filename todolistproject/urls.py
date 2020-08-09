@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^register/', views.register_new_user),
     url(r'accounts/', include('django.contrib.auth.urls')),
     url(r'home/', views.home_page_view),
+    url(r'todolist/$', views.TodoListView.as_view()),
+    url(r'todolist/(?P<id>\d+)/', views.TodoListDetailView.as_view()),
 ]
