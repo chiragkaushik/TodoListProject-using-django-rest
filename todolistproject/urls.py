@@ -23,4 +23,9 @@ urlpatterns = [
     url(r'home/', views.home_page_view),
     url(r'todolist/$', views.TodoListView.as_view()),
     url(r'todolist/(?P<id>\d+)/', views.TodoListDetailView.as_view()),
+    url(r'todoitem/$', views.TodoItemView.as_view()),
+    url(r'todoitem/(?P<id>\d+)/', views.TodoItemDetailView.as_view()),
+    url(r'access/$', views.AccessView.as_view()),
+    url(r'access/(?P<id>\d+)/', views.AccessDetailView.as_view()),
+
 ]

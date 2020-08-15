@@ -32,7 +32,7 @@ class Access(BaseModel):
 
 
 class TodoItem(BaseModel):
-    list_id = models.ForeignKey(TodoList, on_delete=models.CASCADE)
+    list_id = models.ForeignKey(TodoList, on_delete=models.CASCADE, related_name = 'list_id_interaction')
     heading = models.CharField(max_length=30)
     scheduled_on = models.DateTimeField(auto_now_add=True)
 
